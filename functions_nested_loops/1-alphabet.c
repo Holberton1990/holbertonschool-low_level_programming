@@ -1,7 +1,15 @@
-#!include "main.h"
-
-
+#include "main.h"
+/**
+ * print_alphabet - prints all alhpabet
+ * letters in lowercase
+ */
 void print_alphabet(void)
 {
- /*	_putchar('h');
+	char c;
+
+	for (c = 'a'; c <= 'z'; ++c)
+	{
+		_putchar(c);
+	}
+	_putchar('\n');
 }
