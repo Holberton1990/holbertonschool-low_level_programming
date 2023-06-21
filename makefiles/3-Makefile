@@ -9,7 +9,7 @@ all: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
 
 clean :
-	${RM} *~ *.tmp ${NAME}
+	${RM} -f *~ *.tmp ${NAME}
 
 re: oclean all
 
