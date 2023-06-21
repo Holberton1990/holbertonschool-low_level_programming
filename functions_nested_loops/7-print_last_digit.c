@@ -5,7 +5,6 @@
 int print_last_digit(int number)
 {
 	if (number < 10)
-	number == -number;
+	number = -number;
 	return (number % 10);
-	
 }
