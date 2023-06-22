@@ -1,25 +1,15 @@
-#include <unistd.h>
 #include "main.h"
 
 /**
- * print_line - main function
- * @n: parameter
- * Return: 1 if uppercase and 0 if false
+ * main - check the code
+ *
+ * Return: Always 0.
  */
-
-void print_line(int n)
+int main(void)
 {
-	int i j;
-
-	for (i = 0, i < n, i++)
-	{
-		for (j = 0, j < n, j++)
-		{
-			if(j==i)
-				_putchar('_')
-			else 
-				_putchar(' ')
-		}
-	}
-	_putchar('\n');
+    print_line(0);
+    print_line(2);
+    print_line(10);
+    print_line(-4);
+    return (0);
 }
