@@ -2,17 +2,17 @@
 #include "main.h"
 
 /**
- * mul - main function
- * @a: first parameter
- * @b: second parameter
+ * print_numbers - main function
  * Return: 1 if uppercase and 0 if false
  */
 
-void print_numbers(void);
-{       
-       	int i;
+void print_numbers(void)
+{
+	int a;
 
-	for (i >= '0'; i < '10'; i++ )
-
-	_putchar (i);
+	for (a = '0'; a <= '9'; a++)
+	{
+		_putchar(a);
+	}
+	_putchar('\n');
 }
