@@ -1,26 +1,43 @@
-#include <unistd.h>
-#include "main.h"
-
+#include <stdio.h>
 /**
- * print_square - main function
- * @size: parameter
- * Return: 1 if uppercase and 0 if false
- */
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+*/
 
-void print_square(int size)
+int main(void)
 {
-	int i, j;
 
-	if (size > 0)
+	int i;
+
+	for (i = 1; i <= 100; i++)
 	{
-		for (i = 0; i < size; i++)
+		if (i % 3 == 0 && i % 5 == 0)
 		{
-			for (j = 0; j < size; j++)
-				_putchar('#');
-			_putchar('\n');
+			printf("FizzBuzz ");
+			continue;
 		}
-	}
-	else
-		_putchar('\n');
+		if (i % 3 == 0)
+		{
+			printf("Fizz ");
+			continue;
+		}
+		if (i % 5 == 0 && i < 100)
+		{
+			printf("Buzz ");
+			continue;
+		}
+		if (i == 100)
+		{
+			printf("Buzz");
+			continue;
+		}
+		printf("%d ", i);
+
+
+}
+
+	printf("\n");
+	return (0);
 }
 
