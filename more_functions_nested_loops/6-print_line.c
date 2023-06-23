@@ -1,25 +1,15 @@
-#include <unistd.h>
 #include "main.h"
-
 /**
- * print_line - main function
- * @n: parameter
- * Return: 1 if uppercase and 0 if false
+ * print_line - prints a line accros the terminal
+ * and the length is determined by the n argument
+ * @n: length argument of the line being drawn
  */
-
 void print_line(int n)
 {
-        int i j;
-
-        for (i = 0, i < n, i++)
-        {
-                for (j = 0, j < n, j++)
-                {
-                        if(j==i)
-                                _putchar('_')
-                        else
-                                _putchar(' ')
-                }
-        }
-        _putchar('\n');
+	while (n > 0)
+	{
+		_putchar('_');
+		n--;
+	}
+	_putchar('\n');
 }
