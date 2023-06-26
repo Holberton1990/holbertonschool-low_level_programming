@@ -1,7 +1,7 @@
 #include "main.h"
-/*main - check the code
+/*reset_to_98
  *
- * Return: Alway 0.
+ * @n param.
  */
 void reset_to_98(int *n)
 {
