@@ -1,1 +1,1 @@
-98 Battery st.
+I do not fear computers. I fear the lack of them
