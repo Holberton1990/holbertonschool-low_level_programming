@@ -1,17 +1,19 @@
 #include "main.h"
-
+#include <string.h>
 /**
- * _puts - main function
- * @str: param
+ *_puts - displays a given string to the stdout
+ *@s: string
  */
-void _puts(char *str)
+void _puts(char *s)
 {
 	int i = 0;
+	int l = (int) strlen(s);
 
-	while (str[i] != '\0')
+	while (i < l)
 	{
-		_putchar(str[i]);
+		_putchar(s[i]);
 		i++;
 	}
-	_putchar ('\n');
+	_putchar('\n');
+
 }
