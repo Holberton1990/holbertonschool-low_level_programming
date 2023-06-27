@@ -1,16 +1,24 @@
+#include "main.h"
 #include <stdio.h>
-#include <string.h>
+/**
+ * _strcat - main function
+ * @dest: param
+ * @src: param
+ * Return: dest
+ */
+char *_strcat(char *dest, char *src)
+{
+	int i = 0;
+	int j;
 
-char *_strncat(char *dest, char *src, int n) {
-    strncat(dest, src, n);
-    return dest;
-}
+	while (dest[i] != '\0')
+		i++;
 
-int main() {
-    char dest[100] = "Hello ";
-    char src[] = "world!";
-    int n = 3;
-    printf("%s\n", _strncat(dest, src, n));
-    return 0;
+	for (j = 0; src[j] != '\0'; j++)
+		dest[i + j] = src[j];
+	dest[i + j] = '\0';
+	return (dest);
+
+
 }
 
