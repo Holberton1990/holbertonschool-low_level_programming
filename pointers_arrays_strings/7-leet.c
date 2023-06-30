@@ -1,41 +1,25 @@
 #include "main.h"
-#include <string.h>
+
 /**
- *puts_half - function that prints half of a string
- *@str: string
+ * leet - main function
+ * Return: returns sum
+ * @string: param
  */
-char *leet(char *str)
-{	int i;
+char *leet(char *string)
+{
+	int i, j;
+	char lett[11] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	char numbers[11] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 
-	for (int i = 0; str[i] != '\0'; i++;)
+	for (i = 0; string[i] != '\0'; i++)
 	{
-		if 
-			
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	if (strlen(str) % 2 == 0)
-		i = (strlen(str) / 2);
-	else
-		i = ((strlen(str) - 1) / 2) + 1;
-	while (str[i] != '\0')
-	{
-		_putchar(str[i]);
-		i++;
+		for (j = 0; lett[j] != '\0'; j++)
+		{
+			if (string[i] == lett[j])
+			{
+				string[i] = numbers[j];
+			}
+		}
 	}
-		_putchar('\n');
+	return (string);
 }
-
