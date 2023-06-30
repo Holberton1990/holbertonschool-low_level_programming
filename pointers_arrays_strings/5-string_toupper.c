@@ -1,23 +1,35 @@
 #include "main.h"
-#include <string.h>
+#include <stddef.h>
+#include <stdio.h>
 /**
- *string_toupper -  function that changes all the lowercase letters
- * of a string to uppercase
- *@s: pointer to string literal
- *Return: the string in uppercase
-*/
-char *string_toupper(char *s)
+ * _strstr - main function
+ * @haystack: param
+ * @needle: param
+ * Return: a pointer to the beginning of the located substring
+ */
+
+char *_strstr(char *haystack, char *needle)
 {
-	int length = strlen(s);
-	int i = 0;
+	unsigned int i, j;
+	int boolean;
 
-	for (i = 0; i < length; i++)
+	if (*needle == '\0')
+		return (haystack);
+	for (i = 0; haystack[i] != '\0'; i++)
 	{
-	if (s[i] >= 97 && s[i] <= 122)
-	{
-		s[i] = s[i] - 32;
+		boolean = 1;
+		if (haystack[i] == needle[0])
+		{
+			for (j = 1; needle[j] != '\0'; j++)
+			{
+				if (haystack[i + j] != needle[j])
+					boolean = 0;
+			}
+		}
+		else
+			boolean = 0;
+		if (boolean)
+			return (&haystack[i]);
 	}
-	}
-	return (s);
+	return (NULL);
 }
-
