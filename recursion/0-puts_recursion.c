@@ -1,23 +1,15 @@
-#include <stdio.h>
-/** function that prints a string
- */
-void _puts_recursion(char *s)
+#include<stdio.h>
+/**function that prints a string
+ * followed by a new line
+ * */
+ void _puts_recursion(char *s)
 
-if (str == NULL || *str == '\0')
-        return;
-    
-    // Recursive case: combine the last character with the reversed substring
-    reverse_string(str + 1);
-    puts("%c", *str);
-}
-
-int main()
+	 if (*s == '\0')
 {
-    char str[] = "Hello";
-    
-    reverse_string(str);
-    printf("\n");
-    
-    return 0;
-}
 
+	 printf("\n");
+	 return;
+}
+        printf("%c", *s);
+	_puts_recursion(s+1);
+	}
