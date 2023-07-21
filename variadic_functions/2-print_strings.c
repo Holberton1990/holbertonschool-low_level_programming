@@ -1,5 +1,5 @@
+#include <stdio.h>
 #include <stdarg.h>
-
 /**
  * print_strings - print num function
  * @n: number of arguments to print
