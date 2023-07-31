@@ -7,12 +7,6 @@
  *@h: header node
  *Return: number of nodes
  */
-//si punon ne AArray
-//set count to zero
-//iterate count to zero
-//printelement
-//increment count by 1
-//return count
 size_t print_list(const list_t *h)
 {
 	size_t count = 0;
