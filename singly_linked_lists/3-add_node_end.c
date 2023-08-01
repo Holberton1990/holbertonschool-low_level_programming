@@ -10,7 +10,7 @@
  *Return: the addres of the new elemnt
  */
 
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
 	size_t length = strlen(str);
 	list_t *new = NULL;
