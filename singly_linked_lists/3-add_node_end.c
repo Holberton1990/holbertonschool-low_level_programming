@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 /**
- * add_node - function that adds a new node at the beginning
+ * add_node_end - function that adds a new node at the end.
  *@head: pointer to head node
  *@str: string value to the new node
  *Return: the addres of the new elemnt
