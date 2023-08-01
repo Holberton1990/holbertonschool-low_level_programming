@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * size_t list - function that prints all the elements
+ * size_t list_len - function that prints all the elements
  *@h: header node
  *Return: number of nodes
  */
