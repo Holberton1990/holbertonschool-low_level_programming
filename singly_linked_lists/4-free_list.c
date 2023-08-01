@@ -1,4 +1,7 @@
 #include "lists.h"
+#include <stdlib.h>
+#include <string.h>
+
 /**
  *free_list - function that frees all memory allocated to a linked list
  *@head: head of the linked list
@@ -6,11 +9,13 @@
 
 void free_list(list_t *head)
 {
-	list *tmp;
+	if (head == NULL)
+		return;
 
-	while (head != Null)
-	tmp = head;
-	head = head.next;
-	free(tmp->str);
-	free(tmp);
+	if (head->next != NULL)
+	{
+		free_list(head->next);
+	}
+		free(head->str);
+		free(head);
 }
