@@ -23,6 +23,8 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 	}
 	new->str = strdup(str);
+	new->len = strlen(str);
+	new->next = NULL;
 
 	if (new->str == NULL)
 	{
@@ -30,7 +32,6 @@ list_t *add_node(list_t **head, const char *str)
 		free(new);
 		return (NULL);
 	}
-	
 	new->len = length;
 	if (p == NULL)
 	{
