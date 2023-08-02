@@ -3,21 +3,21 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * get_dnodeint_at_index - function that returns the nth node of a linked list
+ * sum_dlistint - function that returns the sum of all the data n
  * @head: first node
- * @index: place of the new node
- * Return: the nth node, or NULL
+ * Return: sum or 0 if the list is empty
  */
 int sum_dlistint(dlistint_t *head)
-{	
+{
 	int sum = 0;
+
 	if (head == NULL)
 		return (0);
-	
-	while(head)
-{
-	sum += head->n;
-	head = head->next;
-}
-	return(sum);
+
+	while (head != NULL)
+	{
+		sum = sum + head->n;
+		head = head->next;
+	}
+	return (sum);
 }
