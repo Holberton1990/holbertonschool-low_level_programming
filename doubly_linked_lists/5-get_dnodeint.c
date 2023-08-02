@@ -1,28 +1,25 @@
+#include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
-#include "stdlib.h"
 #include "lists.h"
 /**
- * get_dnodeint_at_index - function that returns the nth
- * node of a doubly linked list
- *@head: head node
- *@index: index of the node needed
- *Return: the node at index passed as argument
+ * get_dnodeint_at_index - function that returns the nth node of a linked list
+ * @head: first node
+ * @index: place of the new node
+ * Return: the nth node, or NULL
  */
-
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	unsigned int i;
-	dlistint_t *it = head;
-	
+
 	if (head == NULL)
-        return (NULL);
+		return (NULL);
 
-	for (i = 0; i < index; i++)
-{
-	if (it == NULL)
-	return (NULL);
-	it = it->next;
-
-	return it;
+	for (i = 0 ; i < index; i++)
+	{
+		if (head->next == NULL)
+			return (NULL);
+	head = head->next;
+	}
+	return (head);
 }
-
