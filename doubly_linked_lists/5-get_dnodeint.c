@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "stdlib.h"
+#include "lists.h"
 /**
  * get_dnodeint_at_index - function that returns the nth
  * node of a doubly linked list
