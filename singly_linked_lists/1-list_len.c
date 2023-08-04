@@ -3,20 +3,20 @@
 #include "lists.h"
 
 /**
- * size_t list_len - function that prints all the elements
+ * list_len - function that returns the number of nodes
  *@h: header node
  *Return: number of nodes
  */
+
 size_t list_len(const list_t *h)
 {
-	size_t count = 0;
+	size_t n = 0;
 
 	while (h != NULL)
 	{
-		count++;
-
+		n++;
 		h = h->next;
 	}
 
-	return (count);
+	return (n);
 }
