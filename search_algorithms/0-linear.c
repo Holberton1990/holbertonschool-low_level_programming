@@ -16,7 +16,7 @@
  */
 int linear_search(int *array, size_t size, int value)
 {
-	size_t i; // Change the data type of i to size_t
+	size_t i; /* Change the data type of i to size_t */
 
 	if (array == NULL)
 		return (-1);
