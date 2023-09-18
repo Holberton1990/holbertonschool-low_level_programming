@@ -1,18 +1,30 @@
 #include <stdio.h>
 #include <stddef.h>
 #include "search_algos.h"
-int linear_search(int *array, size_t size, int value) {
-    if (array == NULL) {
-        return -1; // Kthe -1 nëse array është NULL
-    }
 
-    for (size_t i = 0; i < size; i++) {
+/**
+ *linear_search - function that searches for a value in an array of integers
+ *@array: array to be searched
+ *@size: size of the array
+ *@value: value to find
+ *Return: -1 if its not present or array is NULL or the index of the value
+ *if found
+ */
+
+int linear_search(int *array, size_t size, int value) 
+{	
+	int i;
+
+    	if (array == NULL) {
+        return -1;
+    
+    for (size_t i = 0; i < size; i++) 
+    {
         printf("Value checked array[%lu] = %d\n", i, array[i]);
         if (array[i] == value) {
-            return i; // Kthe indeksin nëse vlera është gjetur
+            return i; 
         }
     }
-
-    return -1; // Kthe -1 nëse vlera nuk është gjetur në array
+    return -1;
 }
 
