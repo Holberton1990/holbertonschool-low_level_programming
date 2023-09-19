@@ -3,12 +3,15 @@
 
 int binary_search(int *array, size_t size, int value)
 {
-    if (array == NULL || size == 0)
-        return (-1);
+    size_t low, high, i;
 
-    size_t low = 0;
-    size_t high = size - 1;
-    size_t i;
+    if (array == NULL || size == 0)
+    {
+        return -1;
+    }
+
+    low = 0;
+    high = size - 1;
 
     while (low <= high)
     {
@@ -38,6 +41,6 @@ int binary_search(int *array, size_t size, int value)
             high = mid - 1;
         }
     }
-    return (-1);
+    return -1;
 }
 
